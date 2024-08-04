@@ -8,7 +8,7 @@ field_id = str(random.randint(10000, 99999))
 
 def initialize_firebase():
     """Initializes Firebase app with credentials."""
-    cred = credentials.Certificate("C:\\Users\\PC\\Documents\\flashcard\\routes\\menttorix.json")
+    cred = credentials.Certificate("routes/menttorix.json")
     firebase_admin.initialize_app(cred)
 
 

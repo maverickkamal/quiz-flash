@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+google-generativeai
+firebase_admin
+firecrawl
+python-dotenv
+requests_cache

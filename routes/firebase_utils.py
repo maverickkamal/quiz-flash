@@ -1,6 +1,7 @@
 import random
 from datetime import datetime 
 import firebase_admin
+import os
 from firebase_admin import credentials, firestore
 
 
@@ -8,7 +9,7 @@ field_id = str(random.randint(10000, 99999))
 
 def initialize_firebase():
     """Initializes Firebase app with credentials."""
-    cred = credentials.Certificate("routes/menttorix.json")
+    cred = credentials.Certificate(os.environ.get("GOOGLE_APPLICATION_CREDENTIALS"))
     firebase_admin.initialize_app(cred)
 
 

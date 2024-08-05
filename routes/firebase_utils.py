@@ -8,34 +8,13 @@ from firebase_admin import credentials, firestore
 
 field_id = str(random.randint(10000, 99999))
 
-def create_credentials_file():
-    google_credentials = {
-        "type": os.environ.get('GOOGLE_TYPE'),
-        "project_id": os.environ.get('GOOGLE_PROJECT_ID'),
-        "private_key_id": os.environ.get('GOOGLE_PRIVATE_KEY_ID'),
-        "private_key": os.environ.get('GOOGLE_PRIVATE_KEY').replace('\\n', '\n'),
-        "client_email": os.environ.get('GOOGLE_CLIENT_EMAIL'),
-        "client_id": os.environ.get('GOOGLE_CLIENT_ID'),
-        "auth_uri": os.environ.get('GOOGLE_AUTH_URI'),
-        "token_uri": os.environ.get('GOOGLE_TOKEN_URI'),
-        "auth_provider_x509_cert_url": os.environ.get('GOOGLE_AUTH_PROVIDER_X509_CERT_URL'),
-        "client_x509_cert_url": os.environ.get('GOOGLE_CLIENT_X509_CERT_URL'),
-        "universe_domain": os.environ.get('UNIVERSE_DOMAIN')
-    }
 
-    with open('credentials.json', 'w') as cred_file:
-        json.dump(google_credentials, cred_file, indent=4)
-
-    print("Google service account credentials file created successfully.")
-
-# Create credentials.json on startup
-create_credentials_file()
 
 
 
 def initialize_firebase():
     """Initializes Firebase app with credentials."""
-    cred = credentials.Certificate("credentials.json")
+    cred = credentials.Certificate(os.environ.get("credentials.json"))
     firebase_admin.initialize_app(cred)
 
 

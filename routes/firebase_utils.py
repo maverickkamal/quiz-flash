@@ -35,7 +35,7 @@ create_credentials_file()
 
 def initialize_firebase():
     """Initializes Firebase app with credentials."""
-    cred = credentials.Certificate(os.environ.get("credentials.json"))
+    cred = credentials.Certificate("credentials.json")
     firebase_admin.initialize_app(cred)
 
 

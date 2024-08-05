@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, Depends
+from fastapi import APIRouter, HTTPException, Depends
 from pydantic import BaseModel
 from typing import List, Optional
 from firebase_admin import firestore
@@ -8,7 +8,7 @@ from quiz_link import generate_quiz_link
 from quiz_topic import generate_quiz_topic
 from quiz_image import generate_quiz_image
 
-router = FastAPI()
+router = APIRouter()
 
 
 # Define Pydantic models

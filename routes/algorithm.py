@@ -5,6 +5,8 @@ from firebase_admin import firestore
 from routes.firebase_utils import initialize_firebase
 from datetime import datetime
 
+
+
 router = APIRouter()
 
 # Initialize Firestore 

@@ -3,10 +3,10 @@ from pydantic import BaseModel
 from typing import List, Optional
 from firebase_admin import firestore
 from routes.firebase_utils import initialize_firebase, get_user_data, save_quiz_to_firebase
-from quiz_document import generate_quiz_document
-from quiz_link import generate_quiz_link
-from quiz_topic import generate_quiz_topic
-from quiz_image import generate_quiz_image
+from routes.quiz_document import generate_quiz_document
+from routes.quiz_link import generate_quiz_link
+from routes.quiz_topic import generate_quiz_topic
+from routes.quiz_image import generate_quiz_image
 
 router = APIRouter()
 

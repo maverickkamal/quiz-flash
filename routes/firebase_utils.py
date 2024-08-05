@@ -14,7 +14,7 @@ field_id = str(random.randint(10000, 99999))
 
 def initialize_firebase():
     """Initializes Firebase app with credentials."""
-    cred = credentials.Certificate(os.environ.get("credentials.json"))
+    cred = credentials.Certificate("/etc/secrets/credentials.json")
     firebase_admin.initialize_app(cred)
 
 

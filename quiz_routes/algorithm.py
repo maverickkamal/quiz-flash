@@ -1,11 +1,11 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 import random
 from firebase_admin import firestore
 from routes.firebase_utils import initialize_firebase
 from datetime import datetime
 
-router = FastAPI()
+router = APIRouter()
 
 # Initialize Firestore 
 

@@ -18,7 +18,8 @@ def create_credentials_file():
         "auth_uri": os.environ.get('GOOGLE_AUTH_URI'),
         "token_uri": os.environ.get('GOOGLE_TOKEN_URI'),
         "auth_provider_x509_cert_url": os.environ.get('GOOGLE_AUTH_PROVIDER_X509_CERT_URL'),
-        "client_x509_cert_url": os.environ.get('GOOGLE_CLIENT_X509_CERT_URL')
+        "client_x509_cert_url": os.environ.get('GOOGLE_CLIENT_X509_CERT_URL'),
+        "universe_domain": os.environ.get('UNIVERSE_DOMAIN')
     }
 
     with open('credentials.json', 'w') as cred_file:

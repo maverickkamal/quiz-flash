@@ -1,6 +1,6 @@
-import google.generativeai as genai
 import json
 import os
+import google.generativeai as genai
 
 
 def generate_quiz_document(file_name, number_of_questions, question_type, user_data):

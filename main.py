@@ -1,7 +1,6 @@
 from fastapi import FastAPI
 from routes.firebase_utils import initialize_firebase
-from routes import flashcards, decks, study_sessions
-from quiz_routes import quizzes, algorithm
+from routes import algorithm, flashcards, decks, quizzes, study_sessions
 
 
 

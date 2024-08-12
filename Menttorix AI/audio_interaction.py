@@ -13,7 +13,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Set up Gemini API
-genai.configure(api_key=os.getenv('GEMINI_API_KEY'))
+genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
 # Create an instance of DeepgramSpeaker
 speaker = DeepgramSpeaker(os.getenv('DEEPGRAM_API_KEY'))
 

@@ -87,19 +87,23 @@ DEEPGRAM_API_KEY=
 ### **Using the Flashcard/Quiz Routes:**
 
 The following routes are available for interacting with the flashcard and quiz features that is already deployed:
-Flashcards:
-POST /users/{user_id}/flashcards: Create a new flashcard.
-POST /users/{user_id}/flashcards/bulk: Create multiple flashcards in bulk.
-POST /users/{user_id}/flashcards/generate: Generate flashcards based on a text message, uploaded document, or image using AI.
-GET /users/{user_id}/flashcards/due: Retrieve flashcards due for review.
-PUT /users/{user_id}/flashcards/{flashcard_id}: Update a flashcard's review information (quality rating).
-Quizzes:
-POST /users/{user_id}/quizzes: Create a quiz folder to store generated quizzes.
-POST /users/{user_id}/quizzes/{quiz_id}/generate_quiz: Generate a quiz from text content.
-POST /users/{user_id}/quizzes/{quiz_id}/generate_quiz_link: Generate a quiz from a web link.
-POST /users/{user_id}/quizzes/{quiz_id}/generate_quiz_topic: Generate a quiz on a specific topic.
-POST /users/{user_id}/quizzes/{quiz_id}/generate_quiz_image: Generate a quiz from an image.
-POST /users/{user_id}/quizzes/{quiz_id}/generate_quiz_document: Generate a quiz from an uploaded document.
+**Flashcards:**
+
+* **POST /users/{user_id}/flashcards**: Create a new flashcard.
+* **POST /users/{user_id}/flashcards/bulk**: Create multiple flashcards in bulk.
+* **POST /users/{user_id}/flashcards/generate**: Generate flashcards based on a text message, uploaded document, or image using AI.
+* **GET /users/{user_id}/flashcards/due**: Retrieve flashcards due for review.
+* **PUT /users/{user_id}/flashcards/{flashcard_id}**: Update a flashcard's review information (quality rating).
+
+**Quizzes:**
+
+* **POST /users/{user_id}/quizzes**: Create a quiz folder to store generated quizzes.
+* **POST /users/{user_id}/quizzes/{quiz_id}/generate_quiz**: Generate a quiz from text content.
+* **POST /users/{user_id}/quizzes/{quiz_id}/generate_quiz_link**: Generate a quiz from a web link.
+* **POST /users/{user_id}/quizzes/{quiz_id}/generate_quiz_topic**: Generate a quiz on a specific topic.
+* **POST /users/{user_id}/quizzes/{quiz_id}/generate_quiz_image**: Generate a quiz from an image.
+* **POST /users/{user_id}/quizzes/{quiz_id}/generate_quiz_document**: Generate a quiz from an uploaded document.
+
 
 ### **Impact and Potential:**
 
